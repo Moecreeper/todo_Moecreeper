@@ -1,0 +1,15 @@
+.r{
+  color: blue;
+}
+/* 相邻选择 */
+p+h1{
+  color: gray;
+}
+/* 通用兄弟选择器 */
+p~h1{
+  font-style:italic;
+}
+/* 子代选择 */
+p > em:hover{
+  color: aqua;
+}
