@@ -1,0 +1,16 @@
+html{font-size: 62.5%;}
+body{text-align: center;font-size: 3rem;}
+header{width: 100%;background: #4d7d0f; min-height: 7.5rem;line-height: 7.5rem;}
+.flexContainer{ display: flex;}
+nav{flex:1 1 20%;background: #faad34;max-width: 20rem; min-height: 60rem;margin: 3px;padding: 5px;word-wrap:break-word;}
+.content{flex:2 1 60%;background: #e37822;margin: 3px;padding: 5px;}
+aside{flex:1 1 20%;background: #f8e1bc;margin: 3px;padding: 5px;}
+footer{width: 100%; background: #ece8e1;min-height: 75px;}
+/* @media all and (max-width: 600px){
+   body{font-size: 2rem;}
+   .flexContainer{width: 100%; display: flex;flex-flow:column wrap;}
+   nav{min-height: 10rem;order:1;max-width: 100%;}
+   .content{min-height: 20rem;order:3;}
+   aside{min-height: 10rem;order:2;}
+   footer{min-height: 7.5rem;}
+} */

@@ -1,28 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/test.css">
-    <title>Test</title>
+    <title>Document</title>
+    <style>
+        #flex-box {
+            width: 500px;
+            height: 500px;
+            background: #cccccc;
+            display: flex;
+            /* flex-wrap: wrap-reverse; */
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .flex-item {
+            background: rgb(21, 184, 6);
+            width: 100px;
+height: 100px;
+            /* flex-grow: 0.05; */
+            /* flex-shrink: 0.05; */
+        }
+
+        .item1 {
+            background: rgb(245, 15, 15);
+            /* 如果同时设置flex-basis和width，flex-basic优先级会比width高 */
+flex-basis: 200px;
+         /* width: 300px;    */
+            /* flex-basis并不总是width */
+            /* 当flex-direction为row是，flex-basic设置的是width */
+            /* 当flex-direction为column是，flex-basic设置的是height */
+            /* flex-basis: 200px; */
+            /* 
+          如果所有子元素的基准值之和大于剩余空间，
+          则会根据每flex项目设置的基准值，按比率伸缩剩余空间 
+      */
+            /* 
+          150*x + 80 = 92.2;
+          150*x + 60 = 72.2;
+          150*x + 50 = 62.2;
+      */
+
+        }
+
+        .item2 {
+            background: rgb(235, 175, 10);
+
+        }
+
+        .item3 {
+            background: rgb(140, 230, 37);
+        }
+
+        .item4 {
+            background: rgb(42, 199, 227);
+
+        }
+
+        .item5 {
+            background: rgb(218, 18, 178);
+        }
+
+        .item6 {
+            background: rgb(3, 23, 240);
+        }
+
+        .item7 {
+            background: rgb(36, 163, 110);
+        }
+
+        .item8 {
+            background: rgb(251, 185, 3);
+        }
+
+        .item9 {
+            display: flex;
+            flex-direction: column;
+            background: rgb(21, 184, 6);
+        }
+    </style>
 </head>
+
 <body>
-    <p>玩家1：小明</p>
-    <h1>我是一级标题</h1>
-    <h1 id="rua">我是er级标题</h1>
-    <p>这是一个段落文本. 在文本中有一个 <span>span element</span>
-并且还有一个 <a href="http://example.com">链接</a>.</p>
-
-    <p class="test">这是第二段. 包含了一个 <em>强调</em> 元素.</p>
-<img src="" alt="">
-    <ul class="r">
-        <li id="rua">项目1</li>
-        <li><s>项目2</s></li>
-        <li >项目 <em>三</em></li>
-    </ul>
-<script src="../JS/script.js" async>
-
-</script>
+    <div id="flex-box">
+        <flex-box class="flex-item item1">item 1</flex-box>
+        <flex-box class="flex-item item2">item 2</flex-box>
+        <flex-box class="flex-item item3">item 3</flex-box>
+        <flex-box class="flex-item item4">item 4</flex-box>
+        <flex-box class="flex-item item5">item 5</flex-box>
+        <flex-box class="flex-item item6">item 6</flex-box>
+        <flex-box class="flex-item item7">item 7</flex-box>
+        <flex-box class="flex-item item8">item 8</flex-box>
+        <flex-box  item9">
+            <div class="flex-item">11</div>
+            <div class="flex-item">22</div>
+            <div class="flex-item">33</div>
+        </flex-box>
+        <flex-box class="flex-item item1">item 1</flex-box>
+        <flex-box class="flex-item item2">item 2</flex-box>
+        <flex-box class="flex-item item3">item 3</flex-box>
+        <flex-box class="flex-item item4">item 4</flex-box>
+        <flex-box class="flex-item item5">item 5</flex-box>
+        <flex-box class="flex-item item6">item 6</flex-box>
+        <flex-box class="flex-item item7">item 7</flex-box>
+        <flex-box class="flex-item item8">item 8</flex-box>
+    </div>
 </body>
+
 </html>
