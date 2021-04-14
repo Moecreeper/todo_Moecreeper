@@ -12,14 +12,20 @@
 
     <button onclick="write1()">dianwo</button>
     <button onclick="write2()">dianwo2</button>
+    <input type="button" onclick="write3()" value="dianwo3">
     <script>
         x=document.getElementById("intro");
         y=document.getElementsByClassName("intro");
+        z=document.getElementsByTagName("input");
         function write1(){
-            document.write("<p>id=intro"+x.innerHTML+"</p>");
+            document.write("<p>id=intro "+x.innerHTML+"</p>");
         }
         function write2(){
-            document.write("<p>id=intro"+y.innerHTML+"</p>");
+            document.write("<p>class=intro "+y[0].innerHTML+"</p>");
+        }
+        function write3(){
+            document.write("<p>tag=input "+z[0].value+"</p>");
+            console.log(z.length);
         }
     </script>
 </body>
