@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="intro">Hello World!</p>
+<p>本例演示 <b>getElementById</b> 方法！</p>
+
+<script>
+    var n=prompt("请输入N：","3");
+    var p=0;
+    function pi(n){
+        var flag=1;
+        for(var i=1;i<=n;i++){
+            p+=(1/(2*i-1)*flag);
+            flag*=-1;
+        }
+        return p;
+    }
+    alert("PI="+pi(n)*4);
+</script>
+
+</body>
+</html>

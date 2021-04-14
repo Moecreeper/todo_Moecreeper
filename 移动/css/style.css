@@ -102,21 +102,38 @@ main .news img{
     width: 100%;
 }
 main .products {
-    margin:.06rem 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: flex;
     justify-content: space-evenly;
 }
 main .products .product{
-    width: 49%;
-    text-align: center;
+    width: 99%;
 }
+main .products .product .info-box{
+    font-size: .28rem;
+    padding: .2rem 0;
+    display: inline;
+}
+main .products .product .info-box .settled{
+    text-align: left;
+width: 25%;
+float: left;
+left:  0;
+    display: block;
+}
+main .products .product .info-box .value{
+    text-align: left;
+    width: 74%;
+float: right;
+left:  1.4rem;
+    display: block;
+}
+/* 
+
 main .products .product img{
     width: 100%;
 }
-main .products .product .info-box{
-    padding: .2rem 0;
-}
+
 main .products .product .info-box .title{
     color: rgba(0,0,0,.87);
     font-size: .28rem;
@@ -141,7 +158,7 @@ main .products .product .info-box button{
     width: 2.08rem;
     height: .6rem;
     border-radius: .05rem;
-}
+} */
 /* footer */
 footer{
     width: 100%;
