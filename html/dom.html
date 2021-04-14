@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="intro">Hello World!</p>
+    <p class="intro">Bye World!</p>
+
+    <button onclick="write1()">dianwo</button>
+    <button onclick="write2()">dianwo2</button>
+    <script>
+        x=document.getElementById("intro");
+        y=document.getElementsByClassName("intro");
+        function write1(){
+            document.write("<p>id=intro"+x.innerHTML+"</p>");
+        }
+        function write2(){
+            document.write("<p>id=intro"+y.innerHTML+"</p>");
+        }
+    </script>
+</body>
+</html>
