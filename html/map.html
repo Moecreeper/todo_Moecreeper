@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         let myMap = new Map();
+
+// let keyObj = {};
+// let keyFunc = 'a string';
+// let keyString = 'a string';
+
+// // 添加键
+// myMap.set(keyString, "和键'a string'关联的值");
+// myMap.set(keyObj, "和键keyObj关联的值");
+// myMap.set(keyFunc, "和键keyFunc关联的值");
+
+// myMap.size; // 3
+// console.log();
+// // 读取值
+// myMap.get(keyString);    // "和键'a string'关联的值"
+// myMap.get(keyObj);       // "和键keyObj关联的值"
+// myMap.get(keyFunc);      // "和键keyFunc关联的值"
+
+// console.log(myMap.get('a string'));   // "和键'a string'关联的值"
+// console.log(myMap.get('a string'));   // "和键'a string'关联的值"
+//                          // 因为keyString === 'a string'
+// myMap.get({});           // undefined, 因为keyObj !== {}
+// myMap.get(function() {}); // undefined, 因为keyFunc !== function () {}
+let myMap = new Map();
+myMap.set(0, "zero");
+myMap.set(1, "one");
+for (let [key, value] of myMap) {
+  console.log(key + " = " + value);
+}
+// 将会显示两个log。一个是"0 = zero"另一个是"1 = one"
+
+for (let key of myMap.keys()) {
+  console.log(key);
+}
+// 将会显示两个log。 一个是 "0" 另一个是 "1"
+
+for (let value of myMap.values()) {
+  console.log(value);
+}
+// 将会显示两个log。 一个是 "zero" 另一个是 "one"
+
+for (let [key, value] of myMap.entries()) {
+  console.log(key + " = " + value);
+}
+// 将会显示两个log。 一个是 "0 = zero" 另一个是 "1 = one"
+  </script>
+</body>
+</html>
