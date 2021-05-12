@@ -1,0 +1,7 @@
+@import './common.scss';
+$theme : #66ffcc;
+#container{
+    width: 100px;
+    height: 100px;
+    background: $theme;
+}
