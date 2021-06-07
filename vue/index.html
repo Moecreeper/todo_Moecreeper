@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>for循环</title>
+</head>
+<style>
+    .task-input{
+        width: 50%;
+        height: 25px;
+    }
+</style>
+<body>
+<script type="text/javascript" src="./vue.js"></script>
+<script type="text/javascript">
+    window.onload=function(){
+        new Vue({
+            el:"#box",
+            data:{
+                todo:'',
+                list:['width','height','border']
+            },
+            methods:{
+                enterFn(ev){//添加任务
+            //向list中添加一项任务
+            //事件处理函数中的this指向的是当前这个根实例
+            if(this.todo==""){return;}
+                this.list.push(
+                   this.todo
+                );
+                this.todo = "";
+        },
+                cleanFn(){
+                    this.todo='';
+                }
+            }
+        })
+    }
+</script>
+
+<div id="box">
+    <input
+            placeholder="例如：吃饭睡觉打豆豆；    提示：+回车即可添加任务"
+            class="task-input"
+            type="text"
+            v-model="todo"
+            v-on:keyup.enter='enterFn'
+    />
+    <input type="button" name="" value="添加" @click="enterFn">
+    <input type="button" name="" value="清空" @click="cleanFn">
+    <ul>
+        <li v-for="(val,index) in list">
+            {{val}} {{index+1}}
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>
